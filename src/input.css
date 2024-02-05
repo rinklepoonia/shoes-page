@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cross span:nth-child(1) {
+    transform: rotate(58deg) translateY(17px);
+    transition: 300ms;
+    position: relative;
+    top: -5px;
+}
+
+.cross span:nth-child(2) {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: 300ms;
+}
+
+.cross span:nth-child(3) {
+    transform: rotate(123deg) translateY(19px);
+    transition: 300ms;
+    position: relative;
+    top: -10px;
+}
+
+@layer utilities {
+
+    /* Hide scrollbar */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@layer components {
+    .row {
+        @apply flex flex-wrap flex-row mx-[-12px]
+    }
+
+    .numbers {
+        @apply text-[#181818] text-[16px] font-medium font-[Poppins] leading-[20px] border border-[#EDEDED] py-[8px] px-[32px] w-[84px] rounded-[40px] hover:bg-black hover:text-white transition-all ease-linear duration-300
+    }
+
+    .card {
+        @apply w-[312px] h-[488px] shadow-lg mt-[39px] rounded-[10px] cursor-pointer
+    }
+
+    .shoecards {
+        @apply w-[312px] h-[390px] border shadow-lg hover:shadow-blue-100 hover:border-transparent border-[#E0E0E0] rounded-[17px] cursor-pointer;
+    }
+
+    .stroke {
+        -webkit-text-stroke: 1px;
+    }
+}
